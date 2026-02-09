@@ -1,0 +1,188 @@
+{
+  "planes": [
+    {
+      "id": "free",
+      "nombre": "Free",
+      "descripcion": "Prueba completa",
+      "precio_monthly": 0,
+      "precio_annual": 0,
+      "features": [
+        "Acceso a juegos gratis",
+        "Lista de favoritos"
+      ],
+      "color": "slate"
+    },
+    {
+      "id": "pro",
+      "nombre": "Pro",
+      "descripcion": "Lo mejor para jugadores",
+      "precio_monthly": 9.99,
+      "precio_annual": 79.92,
+      "features": [
+        "Todo de Free",
+        "500+ juegos exclusivos",
+        "20% descuento en ofertas",
+        "Descargas ilimitadas"
+      ],
+      "color": "cyan",
+      "recommended": true
+    },
+    {
+      "id": "premium",
+      "nombre": "Premium",
+      "descripcion": "Experiencia completa",
+      "precio_monthly": 14.99,
+      "precio_annual": 119.92,
+      "features": [
+        "Todo de Pro",
+        "1000+ juegos",
+        "35% descuento en ofertas",
+        "Juegos de día 1",
+        "Soporte prioritario 24/7"
+      ],
+      "color": "blue"
+    },
+    {
+      "id": "vip",
+      "nombre": "VIP",
+      "descripcion": "Lo máximo posible",
+      "precio_monthly": 19.99,
+      "precio_annual": 159.92,
+      "features": [
+        "Todo de Premium",
+        "Catálogo ilimitado (10000+)",
+        "50% descuento en todo",
+        "Beta testing",
+        "Eventos exclusivos"
+      ],
+      "color": "purple",
+      "badge": "⭐ MÁXIMO AHORRO"
+    }
+  ],
+  "usuarios_ejemplo": [
+    {
+      "id": "user001",
+      "nombre": "Juan García",
+      "email": "juan@email.com",
+      "plan": "pro",
+      "billing_mode": "monthly",
+      "start_date": "2025-12-01",
+      "next_billing": "2026-01-01",
+      "estado": "activo"
+    },
+    {
+      "id": "user002",
+      "nombre": "María López",
+      "email": "maria@email.com",
+      "plan": "vip",
+      "billing_mode": "annual",
+      "start_date": "2025-06-15",
+      "next_billing": "2026-06-15",
+      "estado": "activo"
+    },
+    {
+      "id": "user003",
+      "nombre": "Carlos Martínez",
+      "email": "carlos@email.com",
+      "plan": "free",
+      "billing_mode": null,
+      "start_date": "2026-01-15",
+      "next_billing": null,
+      "estado": "activo"
+    }
+  ],
+  "caracteristicas_comparativa": {
+    "juegos_gratis": {
+      "descripcion": "Acceso a juegos gratuitos",
+      "free": true,
+      "pro": true,
+      "premium": true,
+      "vip": true
+    },
+    "juegos_exclusivos": {
+      "descripcion": "Juegos exclusivos por plan",
+      "free": false,
+      "pro": "500+",
+      "premium": "1000+",
+      "vip": "10000+"
+    },
+    "descuentos": {
+      "descripcion": "Descuento en todas las compras",
+      "free": false,
+      "pro": "20%",
+      "premium": "35%",
+      "vip": "50%"
+    },
+    "juegos_dia_1": {
+      "descripcion": "Acceso a lanzamientos nuevos",
+      "free": false,
+      "pro": false,
+      "premium": true,
+      "vip": true
+    },
+    "soporte_prioritario": {
+      "descripcion": "Soporte técnico 24/7",
+      "free": false,
+      "pro": false,
+      "premium": true,
+      "vip": true
+    },
+    "beta_testing": {
+      "descripcion": "Acceso a beta testing",
+      "free": false,
+      "pro": false,
+      "premium": false,
+      "vip": true
+    },
+    "eventos_exclusivos": {
+      "descripcion": "Acceso a eventos VIP",
+      "free": false,
+      "pro": false,
+      "premium": false,
+      "vip": true
+    }
+  },
+  "faq": [
+    {
+      "id": 1,
+      "pregunta": "¿Puedo cambiar de plan en cualquier momento?",
+      "respuesta": "Sí, puedes cambiar o cancelar tu suscripción en cualquier momento desde tu panel de control. Los cambios se aplicarán en el siguiente ciclo de facturación."
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Hay período de prueba gratuita?",
+      "respuesta": "Sí, acceso completo a la suscripción Pro por 7 días sin costo. Sin necesidad de tarjeta de crédito."
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Qué métodos de pago aceptan?",
+      "respuesta": "Aceptamos tarjetas de crédito/débito, PayPal, Google Pay y transferencia bancaria. Todos los pagos son seguros y cifrados."
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Se factura automáticamente?",
+      "respuesta": "Sí, se renueva automáticamente cada mes/año. Recibirás un correo de confirmación con tu factura."
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Hay reembolsos?",
+      "respuesta": "Si cancelas dentro de 7 días de compra, se te reembolsa el 100% del dinero. Después de 7 días, no hay reembolsos pero puedes cambiar a un plan inferior."
+    },
+    {
+      "id": 6,
+      "pregunta": "¿Puedo usar mi suscripción en múltiples dispositivos?",
+      "respuesta": "Sí, tu suscripción funciona en cualquier dispositivo. Inicia sesión y accede a todos los beneficios."
+    }
+  ],
+  "estadisticas": {
+    "total_usuarios": 15234,
+    "usuarios_pro": 6543,
+    "usuarios_premium": 4234,
+    "usuarios_vip": 2145,
+    "usuarios_free": 2312,
+    "mrr": 125456.78,
+    "arr": 1505481.36,
+    "churn_rate": 2.5,
+    "growth_rate": 12.3
+  }
+}

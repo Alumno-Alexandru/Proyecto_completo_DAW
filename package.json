@@ -1,0 +1,15 @@
+{
+  "name": "proyecto-completo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:css": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css",
+    "watch:css": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18"
+  }
+}

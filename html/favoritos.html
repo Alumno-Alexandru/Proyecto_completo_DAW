@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/8316/8316931.png">
+    <title>Mis Favoritos - GitGame Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <script src="../src/javascript/app.js"></script>
+    <script src="../src/javascript/elecciones.js" defer></script>
+    <script src="../src/javascript/login.js" defer></script>
+</head>
+
+<body class="bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950 text-white min-h-screen">
+
+    <!-- NAV MEJORADA -->
+    <nav class="nav-enhanced sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
+                    <span class="text-lg font-bold">🎮</span>
+                </div>
+                <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">GitGame Store</a>
+            </div>
+
+            <ul class="hidden md:flex gap-8 list-none">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="todos-los-juegos.html" class="nav-link">Todos los Juegos</a></li>
+                <li><a href="juegos-gratis.html" class="nav-link">Gratis</a></li>
+                <li><a href="ofertas-especiales.html" class="nav-link">Ofertas</a></li>
+                <li><a href="suscripciones.html" class="nav-link">Suscripciones</a></li>
+                <li><a href="favoritos.html" class="nav-link active">Favoritos</a></li>
+            </ul>
+
+            <div class="flex items-center gap-4">
+                <div class="search-box hidden md:flex">
+                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"><use xlink:href="../src/img/sprites.svg#icon-search"></use></svg>
+                    <input type="text" placeholder="Buscar juegos..." class="search-input">
+                </div>
+
+                <button class="relative cart-btn p-2 rounded-lg hover:bg-blue-900/50 transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor"><use xlink:href="../src/img/sprites.svg#icon-cart"></use></svg>
+                    <span class="cart-count absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                </button>
+
+                <button class="profile-btn p-2 rounded-lg hover:bg-blue-900/50 transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor"><use xlink:href="../src/img/sprites.svg#icon-profile"></use></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MODAL DEL CARRITO -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h2 class="text-2xl font-bold">Mi Carrito</h2>
+                <button class="close-cart-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor"><use xlink:href="../src/img/sprites.svg#icon-close"></use></svg>
+                </button>
+            </div>
+
+            <div class="cart-items-list" id="cartItemsList">
+                <div class="empty-cart-message">
+                    <p class="text-gray-400 text-center py-8">Tu carrito está vacío</p>
+                </div>
+            </div>
+
+            <div class="cart-modal-footer">
+                <div class="cart-summary">
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">0,00 €</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Descuentos:</span>
+                        <span id="discounts" class="text-green-400">-0,00 €</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total:</span>
+                        <span id="total">0,00 €</span>
+                    </div>
+                </div>
+
+                <button class="checkout-btn">Proceder al Pago</button>
+                <button class="continue-shopping-btn">Continuar Comprando</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="cartOverlay" class="cart-overlay"></div>
+
+    <!-- PÁGINA DE FAVORITOS -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="mb-12">
+                <h1 class="text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-pink-400 via-red-400 to-rose-400 bg-clip-text text-transparent">
+                        Mis Favoritos
+                    </span>
+                </h1>
+                <p class="text-xl text-gray-300">❤️ Tus juegos guardados. Sincronizado automáticamente.</p>
+                
+                <!-- Banner informativo -->
+                <div class="mt-6 bg-gradient-to-r from-pink-900/20 to-red-900/20 border border-pink-500/30 rounded-lg p-6">
+                    <p class="text-gray-200">💖 <strong>Lista de deseos personal:</strong> Guarda los juegos que te interesan. Recibirás notificaciones cuando tengan descuentos especiales. Los favoritos se guardan en tu navegador automáticamente.</p>
+                </div>
+            </div>
+
+            <!-- Grid de favoritos -->
+            <div id="wishlist-container" class="juegos-container grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
+                <!-- Los juegos favoritos se cargan aquí mediante JavaScript -->
+            </div>
+
+            <!-- Mensaje si no hay favoritos -->
+            <div id="empty-wishlist" class="text-center py-16">
+                <p class="text-3xl mb-4">😢</p>
+                <p class="text-gray-400 text-xl mb-8">No tienes juegos en favoritos aún</p>
+                <a href="all-games.html" class="btn-primary inline-block">Explorar Catálogo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-enhanced mt-20 pt-12 border-t border-blue-900/30">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+                        <span class="text-2xl">🎮</span> GitGame Store
+                    </h3>
+                    <p class="text-gray-400 text-sm">Tu tienda de confianza para los mejores juegos</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4 text-cyan-400">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="index.html" class="hover:text-cyan-400 transition">Inicio</a></li>
+                        <li><a href="all-games.html" class="hover:text-cyan-400 transition">Todos los Juegos</a></li>
+                        <li><a href="free-games.html" class="hover:text-cyan-400 transition">Gratis</a></li>
+                        <li><a href="special-offers.html" class="hover:text-cyan-400 transition">Ofertas</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4 text-cyan-400">Información</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-cyan-400 transition">Privacidad</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition">Términos</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4 text-cyan-400">Contacto</h4>
+                    <p class="text-gray-400 text-sm mb-2">📧 info@gamerhub.com</p>
+                    <p class="text-gray-400 text-sm mb-4">📱 +34 900 123 456</p>
+                </div>
+            </div>
+
+            <div class="border-t border-blue-900/30 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2026 GitGame Store. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../src/javascript/app.js"></script>
+    <script src="../src/javascript/pages.js"></script>
+
+</body>
+
+</html>
