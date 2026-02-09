@@ -598,3 +598,56 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+// ============================================
+// MENÚ HAMBURGUESA RESPONSIVE
+// ============================================
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    if (hamburgerBtn && mobileMenu) {
+        // Toggle menu when hamburger is clicked
+        hamburgerBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            mobileMenu.classList.toggle('show');
+            hamburgerBtn.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('show');
+                hamburgerBtn.classList.remove('active');
+                // Update active link
+                mobileNavLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!hamburgerBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.remove('show');
+                hamburgerBtn.classList.remove('active');
+            }
+        });
+
+        // Close menu on window resize (when it goes to desktop)
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768) {
+                mobileMenu.classList.remove('show');
+                hamburgerBtn.classList.remove('active');
+            }
+        });
+
+        // Set active link based on current page
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        mobileNavLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+                link.classList.add('active');
+            }
+        });
+    }
+});

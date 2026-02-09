@@ -29,7 +29,7 @@
                 <div class="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
                     <span class="text-lg font-bold">🎮</span>
                 </div>
-                <span class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">GitGame Store</span>
+                <span class="text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">GitGame Store</span>
             </div>
 
             <!-- Menu principal -->
@@ -43,7 +43,7 @@
             </ul>
 
             <!-- Herramientas -->
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2 md:gap-4">
                 <!-- Buscador -->
                 <div class="search-box hidden md:flex">
                     <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"><use xlink:href="../src/img/sprites.svg#icon-search"></use></svg>
@@ -57,10 +57,29 @@
                 </button>
 
                 <!-- Perfil -->
-                <button class="profile-btn p-2 rounded-lg hover:bg-blue-900/50 transition">
+                <button class="profile-btn p-2 rounded-lg hover:bg-blue-900/50 transition md:flex">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor"><use xlink:href="../src/img/sprites.svg#icon-profile"></use></svg>
                 </button>
+
+                <!-- Hamburger Menu -->
+                <button class="hamburger-menu md:hidden flex items-center justify-center w-10 h-10 rounded-lg hover:bg-blue-900/50 transition" id="hamburgerBtn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu md:hidden">
+            <ul class="flex flex-col gap-0 list-none py-4">
+                <li><a href="index.html" class="mobile-nav-link active block px-4 py-3 hover:bg-blue-900/50">Inicio</a></li>
+                <li><a href="todos-los-juegos.html" class="mobile-nav-link block px-4 py-3 hover:bg-blue-900/50">Todos los Juegos</a></li>
+                <li><a href="juegos-gratis.html" class="mobile-nav-link block px-4 py-3 hover:bg-blue-900/50">Gratis</a></li>
+                <li><a href="ofertas-especiales.html" class="mobile-nav-link block px-4 py-3 hover:bg-blue-900/50">Ofertas</a></li>
+                <li><a href="suscripciones.html" class="mobile-nav-link block px-4 py-3 hover:bg-blue-900/50">Suscripciones</a></li>
+                <li><a href="favoritos.html" class="mobile-nav-link block px-4 py-3 hover:bg-blue-900/50">Favoritos</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -178,7 +197,7 @@
             <!-- Sección Secundaria de Opciones -->
             <h2 class="text-3xl font-bold mb-12 text-center mt-20">Más Opciones</h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6">
 
                 <!-- Opción 5: Por Género -->
                 <div class="option-card-secondary">
@@ -214,7 +233,7 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold mb-12 text-center">¿Por qué elegir GitGame Store?</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8">
 
                 <div class="feature-card">
                     <div class="feature-icon">💰</div>
