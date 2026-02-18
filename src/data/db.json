@@ -1,0 +1,354 @@
+{
+  "games": [
+    {
+      "id": 1,
+      "title": "FIFA 26",
+      "price": 69.99,
+      "discount": 0,
+      "image": "../src/img/games/fifa-26.jpg",
+      "rating": "⭐⭐⭐⭐⭐ (128)",
+      "label": "Juego base",
+      "isFree": false
+    },
+    {
+      "id": 2,
+      "title": "Grand Theft Auto V",
+      "price": 14.99,
+      "discount": 50,
+      "image": "../src/img/games/gta-v.jpg",
+      "rating": "⭐⭐⭐⭐⭐ (2.5k)",
+      "label": "Juego base",
+      "isFree": false
+    },
+    {
+      "id": 3,
+      "title": "Rocket League",
+      "price": 0,
+      "discount": 100,
+      "image": "../src/img/games/rocket-league.jpg",
+      "rating": "⭐⭐⭐⭐ (1.2k)",
+      "label": "F2P",
+      "isFree": true
+    },
+    {
+      "id": 4,
+      "title": "The Crew 2",
+      "price": 1.50,
+      "discount": 95,
+      "image": "../src/img/games/the-crew-2.jpg",
+      "rating": "⭐⭐⭐⭐ (856)",
+      "label": "Juego base",
+      "isFree": false
+    },
+    {
+      "id": 5,
+      "title": "Cyberpunk 2077",
+      "price": 20.99,
+      "discount": 65,
+      "image": "../src/img/games/cyberpunk-2077.jpg",
+      "rating": "⭐⭐⭐⭐⭐ (3.1k)",
+      "label": "Juego base",
+      "isFree": false
+    },
+    {
+      "id": 6,
+      "title": "FNAF Into the Pit",
+      "price": 17.99,
+      "discount": 0,
+      "image": "../src/img/games/fnaf-into-the-pit.jpg",
+      "rating": "⭐⭐⭐⭐ (745)",
+      "label": "Juego base",
+      "isFree": false
+    },
+    {
+      "id": 7,
+      "title": "Fortnite",
+      "price": 0,
+      "discount": 100,
+      "image": "../src/img/games/fortnite.jpg",
+      "rating": "⭐⭐⭐⭐ (5k+)",
+      "label": "F2P",
+      "isFree": true
+    },
+    {
+      "id": 8,
+      "title": "Red Dead Redemption 2",
+      "price": 14.99,
+      "discount": 75,
+      "image": "../src/img/games/red-dead-2.jpg",
+      "rating": "⭐⭐⭐⭐⭐ (4.2k)",
+      "label": "Juego base",
+      "isFree": false
+    },
+    {
+      "id": 9,
+      "title": "Valorant",
+      "price": 0,
+      "discount": 100,
+      "image": "../src/img/games/valorant.jpg",
+      "rating": "⭐⭐⭐⭐⭐ (6.3k)",
+      "label": "F2P",
+      "isFree": true
+    },
+    {
+      "id": 10,
+      "title": "Jurassic World Evolution 3",
+      "price": 59.99,
+      "discount": 0,
+      "image": "../src/img/games/jurassic-world-3.jpg",
+      "rating": "⭐⭐⭐⭐⭐ (512)",
+      "label": "Juego base",
+      "isFree": false
+    },
+    {
+      "id": 11,
+      "title": "Lost Ark",
+      "price": 0,
+      "discount": 100,
+      "image": "../src/img/games/lost-ark.jpg",
+      "rating": "⭐⭐⭐⭐ (2.8k)",
+      "label": "F2P",
+      "isFree": true
+    },
+    {
+      "id": 12,
+      "title": "Apex Legends",
+      "price": 0,
+      "discount": 100,
+      "image": "../src/img/games/apex-legends.jpg",
+      "rating": "⭐⭐⭐⭐ (4.1k)",
+      "label": "F2P",
+      "isFree": true
+    },
+    {
+      "id": 13,
+      "title": "League of Legends",
+      "price": 0,
+      "discount": 100,
+      "image": "../src/img/games/league-of-legends.jpg",
+      "rating": "⭐⭐⭐⭐⭐ (7.2k)",
+      "label": "F2P",
+      "isFree": true
+    },
+    {
+      "id": 14,
+      "title": "Dota 2",
+      "price": 0,
+      "discount": 100,
+      "image": "../src/img/games/dota-2.jpg",
+      "rating": "⭐⭐⭐⭐⭐ (5.9k)",
+      "label": "F2P",
+      "isFree": true
+    },
+    {
+      "id": 15,
+      "title": "Team Fortress 2",
+      "price": 0,
+      "discount": 100,
+      "image": "../src/img/games/team-fortress-2.jpg",
+      "rating": "⭐⭐⭐⭐ (3.2k)",
+      "label": "F2P",
+      "isFree": true
+    },
+    {
+      "id": 16,
+      "title": "Elden Ring",
+      "price": 24.99,
+      "discount": 40,
+      "image": "../src/img/games/elden-ring.jpg",
+      "rating": "⭐⭐⭐⭐⭐ (9.8k)",
+      "label": "Juego base",
+      "isFree": false
+    },
+    {
+      "id": 17,
+      "title": "AC Valhalla",
+      "price": 19.99,
+      "discount": 50,
+      "image": "../src/img/games/ac-valhalla.jpg",
+      "rating": "⭐⭐⭐⭐ (6.7k)",
+      "label": "Juego base",
+      "isFree": false
+    },
+    {
+      "id": 18,
+      "title": "Baldur's Gate 3",
+      "price": 29.99,
+      "discount": 33,
+      "image": "../src/img/games/baldurs-gate-3.jpg",
+      "rating": "⭐⭐⭐⭐⭐ (8.9k)",
+      "label": "Juego base",
+      "isFree": false
+    },
+    {
+      "id": 19,
+      "title": "Starfield",
+      "price": 22.49,
+      "discount": 55,
+      "image": "../src/img/games/starfield.jpg",
+      "rating": "⭐⭐⭐⭐ (7.1k)",
+      "label": "Juego base",
+      "isFree": false
+    },
+    {
+      "id": 20,
+      "title": "The Last of Us 2",
+      "price": 27.99,
+      "discount": 30,
+      "image": "../src/img/games/the-last-of-us-2.jpg",
+      "rating": "⭐⭐⭐⭐⭐ (8.3k)",
+      "label": "Juego base",
+      "isFree": false
+    },
+    {
+      "id": 21,
+      "title": "God of War Ragnarök",
+      "price": 23.99,
+      "discount": 45,
+      "image": "../src/img/games/god-of-war-ragnarok.jpg",
+      "rating": "⭐⭐⭐⭐⭐ (9.1k)",
+      "label": "Juego base",
+      "isFree": false
+    },
+    {
+      "id": 22,
+      "title": "Dying Light 2",
+      "price": 19.99,
+      "discount": 60,
+      "image": "../src/img/games/dying-light-2.jpg",
+      "rating": "⭐⭐⭐⭐ (5.8k)",
+      "label": "Juego base",
+      "isFree": false
+    },
+    {
+      "id": 23,
+      "title": "Ghostwire Tokyo",
+      "price": 25.49,
+      "discount": 35,
+      "image": "../src/img/games/ghostwire-tokyo.jpg",
+      "rating": "⭐⭐⭐⭐ (4.9k)",
+      "label": "Juego base",
+      "isFree": false
+    },
+    {
+      "id": 24,
+      "title": "Final Fantasy XVI",
+      "price": 49.99,
+      "discount": 0,
+      "image": "../src/img/games/final-fantasy-xvi.jpg",
+      "rating": "⭐⭐⭐⭐⭐ (7.8k)",
+      "label": "Juego base",
+      "isFree": false
+    },
+    {
+      "id": 25,
+      "title": "Spider-Man 2",
+      "price": 39.99,
+      "discount": 20,
+      "image": "../src/img/games/spider-man-2.jpg",
+      "rating": "⭐⭐⭐⭐⭐ (8.6k)",
+      "label": "Juego base",
+      "isFree": false
+    },
+    {
+      "id": 26,
+      "title": "Hogwarts Legacy",
+      "price": 45.99,
+      "discount": 10,
+      "image": "../src/img/games/hogwarts-legacy.jpg",
+      "rating": "⭐⭐⭐⭐ (7.2k)",
+      "label": "Juego base",
+      "isFree": false
+    },
+    {
+      "id": 27,
+      "title": "Tekken 8",
+      "price": 35.99,
+      "discount": 28,
+      "image": "../src/img/games/tekken-8.jpg",
+      "rating": "⭐⭐⭐⭐ (6.4k)",
+      "label": "Juego base",
+      "isFree": false
+    },
+    {
+      "id": 28,
+      "title": "Street Fighter 6",
+      "price": 34.99,
+      "discount": 30,
+      "image": "../src/img/games/street-fighter-6.jpg",
+      "rating": "⭐⭐⭐⭐ (5.5k)",
+      "label": "Juego base",
+      "isFree": false
+    },
+    {
+      "id": 29,
+      "title": "Resident Evil 4",
+      "price": 42.99,
+      "discount": 14,
+      "image": "../src/img/games/resident-evil-4.jpg",
+      "rating": "⭐⭐⭐⭐⭐ (8.1k)",
+      "label": "Juego base",
+      "isFree": false
+    },
+    {
+      "id": 30,
+      "title": "Dragon Age Veilguard",
+      "price": 36.99,
+      "discount": 26,
+      "image": "../src/img/games/dragon-age-veilguard.jpg",
+      "rating": "⭐⭐⭐⭐ (6.2k)",
+      "label": "Juego base",
+      "isFree": false
+    },
+    {
+      "id": 31,
+      "title": "Returnal",
+      "price": 38.99,
+      "discount": 22,
+      "image": "../src/img/games/returnal.jpg",
+      "rating": "⭐⭐⭐⭐ (5.1k)",
+      "label": "Juego base",
+      "isFree": false
+    },
+    {
+      "id": 32,
+      "title": "S.T.A.L.K.E.R. 2",
+      "price": 46.99,
+      "discount": 6,
+      "image": "../src/img/games/stalker-2.jpg",
+      "rating": "⭐⭐⭐⭐⭐ (7.9k)",
+      "label": "Juego base",
+      "isFree": false
+    },
+    {
+      "id": 33,
+      "title": "Dragon's Dogma 2",
+      "price": 41.99,
+      "discount": 16,
+      "image": "../src/img/games/dragons-dogma-2.jpg",
+      "rating": "⭐⭐⭐⭐ (6.9k)",
+      "label": "Juego base",
+      "isFree": false
+    },
+    {
+      "id": 34,
+      "title": "Armored Core VI",
+      "price": 31.99,
+      "discount": 36,
+      "image": "../src/img/games/armored-core-vi.jpg",
+      "rating": "⭐⭐⭐⭐ (5.3k)",
+      "label": "Juego base",
+      "isFree": false
+    },
+    {
+      "id": 35,
+      "title": "Metaphor ReFantazio",
+      "price": 37.99,
+      "discount": 24,
+      "image": "../src/img/games/metaphor-refantazio.jpg",
+      "rating": "⭐⭐⭐⭐⭐ (8.4k)",
+      "label": "Juego base",
+      "isFree": false
+    }
+  ]
+}
