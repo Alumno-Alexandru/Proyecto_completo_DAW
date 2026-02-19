@@ -4,22 +4,29 @@ Briefing del Proyecto: GitGame Store
 Nombre del Cliente: GitGame Store
 Tipo de Negocio: Tienda Online de Videojuegos y Suscripciones Digitales
 Ubicación: Operación Global (Sede ficticia en Madrid, España)
-Objetivo del Sitio Web: Consolidar una plataforma robusta para la venta de videojuegos digitales y gestionar un sistema de suscripciones escalonado (Free, Pro, Premium, VIP) que maximice la retención de usuarios.
+Objetivo del Sitio Web: Consolidar una plataforma robusta para la venta de videojuegos digitales y gestionar un sistema de 
+suscripciones escalonado (Free, Pro, Premium, VIP) 
+que maximice la retención de usuarios.
 
 2. Objetivos del Proyecto
 Centralizar el Catálogo: Ofrecer una interfaz unificada para explorar, filtrar y comprar videojuegos de diversas categorías.
-Potenciar el Modelo de Suscripción: Implementar un sistema flexible (mensual/anual) que permita a los usuarios mejorar su estatus y acceder a beneficios exclusivos.
+Potenciar el Modelo de Suscripción: Implementar un sistema flexible (mensual/anual) que permita a los usuarios mejorar su 
+estatus y acceder a beneficios exclusivos.
 Modernizar la Experiencia de Usuario (UX): Asegurar una navegación fluida, intuitiva y responsive, adaptada a la estética "gamer" actual.
 
 3. Descripción del Negocio
-Misión: Proporcionar a los jugadores acceso inmediato a los mejores títulos y beneficios exclusivos a través de una plataforma tecnológica eficiente y centrada en el usuario.
-Visión: Ser el referente independiente en la distribución digital de videojuegos, conocido por su transparencia y valor añadido en suscripciones.
+Misión: Proporcionar a los jugadores acceso inmediato a los mejores títulos y beneficios exclusivos a través de una plataforma
+ tecnológica eficiente y centrada en el usuario.
+Visión: Ser el referente independiente en la distribución digital de videojuegos, conocido por su transparencia y valor añadido
+ en suscripciones.
 Valores: Innovación tecnológica, pasión por el gaming, y compromiso con la comunidad de jugadores.
 
 4. Información de Mercado
-Audiencia Objetivo: Gamers apasionados, de 15 a 45 años, familiarizados con la cultura digital, que buscan valor en servicios de suscripción y ofertas curadas.
+Audiencia Objetivo: Gamers apasionados, de 15 a 45 años, familiarizados con la cultura digital, que buscan valor en servicios de suscripción
+ y ofertas curadas.
 Competidores: Steam, Epic Games Store, Xbox Game Pass, Humble Bundle.
-Diferenciadores Clave: Enfoque en niveles de suscripción claros con beneficios tangibles, interfaz simplificada sin "bloatware", y transparencia en precios.
+Diferenciadores Clave: Enfoque en niveles de suscripción claros con beneficios tangibles, interfaz simplificada sin "bloatware", y 
+transparencia en precios.
 
 5. Requerimientos Específicos
 Idiomas: Español (Principal), con estructura preparada para internacionalización (i18n).
