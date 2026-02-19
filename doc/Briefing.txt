@@ -1,7 +1,9 @@
 BRIEFING - PROYECTO_COMPLETO_GITGAME_STORE
 Resumen del proyecto
 
-Proyecto_completo-main es una versión didáctica de una tienda de videojuegos (GitGame Store) que reúne un frontend estático y módulos backend de ejemplo. El objetivo es demostrar la construcción de una interfaz de catálogo, carrito de compras básico y un sistema de suscripciones con lógica del lado cliente y ejemplos de manejo en Python.
+Proyecto_completo-main es una versión didáctica de una tienda de videojuegos (GitGame Store) que reúne un frontend estático y módulos backend de ejemplo. 
+El objetivo es demostrar la construcción de una interfaz de catálogo, carrito de compras básico y un sistema de suscripciones con lógica del lado cliente 
+y ejemplos de manejo en Python.
 
 Alcance y componentes clave (breve)
 
