@@ -1,5 +1,10 @@
 # PROYECTO_COMPLETO_GITGAME_STORE
 
+## Briefings (enlaces a `doc/`)
+
+- [Briefing_Proyecto_GitGame.txt](doc/Briefing_Proyecto_GitGame.txt)
+- [Briefing.txt](doc/Briefing.txt)
+
 Resumen breve
 
 Este repositorio contiene el proyecto "GitGame Store" —un sitio web de ejemplo con catálogo de juegos, carrito de compras y un sistema de suscripciones— desarrollado como parte del trabajo del curso. El objetivo es ofrecer una versión completa y modular que incluya frontend (HTML/CSS/JS), lógica cliente, y módulos de backend en Python para manejar suscripciones.
@@ -73,10 +78,7 @@ python -m venv .venv
 ````markdown
 # PROYECTO_COMPLETO_GITGAME_STORE
 
-## Briefings (enlaces a `doc/`)
 
-- [Briefing_Proyecto_GitGame.txt](doc/Briefing_Proyecto_GitGame.txt)
-- [Briefing.txt](doc/Briefing.txt)
 
 # Resumen breve
 
