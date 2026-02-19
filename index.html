@@ -11,12 +11,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Tu CSS -->
-    <link rel="stylesheet" href="../src/css/styles.css">
+    <link rel="stylesheet" href="src/css/styles.css">
     
     <!-- Tu JS -->
-    <script src="../src/javascript/app.js"></script>
-    <script src="../src/javascript/elecciones.js" defer></script>
-    <script src="../src/javascript/login.js" defer></script>
+    <script src="src/javascript/app.js"></script>
+    <script src="src/javascript/elecciones.js" defer></script>
+    <script src="src/javascript/login.js" defer></script>
 </head>
 
 <body class="bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950 text-white min-h-screen">
@@ -35,30 +35,30 @@
             <!-- Menu principal -->
             <ul class="hidden md:flex gap-8 list-none">
                 <li><a href="index.html" class="nav-link active">Inicio</a></li>
-                <li><a href="todos-los-juegos.html" class="nav-link">Todos los Juegos</a></li>
-                <li><a href="juegos-gratis.html" class="nav-link">Gratis</a></li>
-                <li><a href="ofertas-especiales.html" class="nav-link">Ofertas</a></li>
-                <li><a href="suscripciones.html" class="nav-link">Suscripciones</a></li>
-                <li><a href="favoritos.html" class="nav-link">Favoritos</a></li>
+                <li><a href="html/todos-los-juegos.html" class="nav-link">Todos los Juegos</a></li>
+                <li><a href="html/juegos-gratis.html" class="nav-link">Gratis</a></li>
+                <li><a href="html/ofertas-especiales.html" class="nav-link">Ofertas</a></li>
+                <li><a href="html/suscripciones.html" class="nav-link">Suscripciones</a></li>
+                <li><a href="html/favoritos.html" class="nav-link">Favoritos</a></li>
             </ul>
 
             <!-- Herramientas -->
             <div class="flex items-center gap-2 md:gap-4">
                 <!-- Buscador -->
                 <div class="search-box hidden md:flex">
-                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"><use xlink:href="../src/img/sprites.svg#icon-search"></use></svg>
+                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"><use xlink:href="src/img/sprites.svg#icon-search"></use></svg>
                     <input type="text" placeholder="Buscar juegos..." class="search-input">
                 </div>
 
                 <!-- Carrito -->
                 <button class="relative cart-btn p-2 rounded-lg hover:bg-blue-900/50 transition">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor"><use xlink:href="../src/img/sprites.svg#icon-cart"></use></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor"><use xlink:href="src/img/sprites.svg#icon-cart"></use></svg>
                     <span class="cart-count absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
                 </button>
 
                 <!-- Perfil -->
                 <button class="profile-btn p-2 rounded-lg hover:bg-blue-900/50 transition md:flex">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor"><use xlink:href="../src/img/sprites.svg#icon-profile"></use></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor"><use xlink:href="src/img/sprites.svg#icon-profile"></use></svg>
                 </button>
 
                 <!-- Hamburger Menu -->
@@ -74,11 +74,11 @@
         <div id="mobileMenu" class="mobile-menu md:hidden">
             <ul class="flex flex-col gap-0 list-none py-4">
                 <li><a href="index.html" class="mobile-nav-link active block px-4 py-3 hover:bg-blue-900/50">Inicio</a></li>
-                <li><a href="todos-los-juegos.html" class="mobile-nav-link block px-4 py-3 hover:bg-blue-900/50">Todos los Juegos</a></li>
-                <li><a href="juegos-gratis.html" class="mobile-nav-link block px-4 py-3 hover:bg-blue-900/50">Gratis</a></li>
-                <li><a href="ofertas-especiales.html" class="mobile-nav-link block px-4 py-3 hover:bg-blue-900/50">Ofertas</a></li>
-                <li><a href="suscripciones.html" class="mobile-nav-link block px-4 py-3 hover:bg-blue-900/50">Suscripciones</a></li>
-                <li><a href="favoritos.html" class="mobile-nav-link block px-4 py-3 hover:bg-blue-900/50">Favoritos</a></li>
+                <li><a href="html/todos-los-juegos.html" class="mobile-nav-link block px-4 py-3 hover:bg-blue-900/50">Todos los Juegos</a></li>
+                <li><a href="html/juegos-gratis.html" class="mobile-nav-link block px-4 py-3 hover:bg-blue-900/50">Gratis</a></li>
+                <li><a href="html/ofertas-especiales.html" class="mobile-nav-link block px-4 py-3 hover:bg-blue-900/50">Ofertas</a></li>
+                <li><a href="html/suscripciones.html" class="mobile-nav-link block px-4 py-3 hover:bg-blue-900/50">Suscripciones</a></li>
+                <li><a href="html/favoritos.html" class="mobile-nav-link block px-4 py-3 hover:bg-blue-900/50">Favoritos</a></li>
             </ul>
         </div>
     </nav>
@@ -90,7 +90,7 @@
             <div class="cart-modal-header">
                 <h2 class="text-2xl font-bold">Mi Carrito</h2>
                 <button class="close-cart-btn">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor"><use xlink:href="../src/img/sprites.svg#icon-close"></use></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor"><use xlink:href="src/img/sprites.svg#icon-close"></use></svg>
                 </button>
             </div>
 
@@ -155,7 +155,7 @@
                 <!-- Opción 1: Todos los Juegos -->
                 <div class="option-card" data-page="todos-los-juegos">
                     <div class="option-icon">
-                        <svg class="w-16 h-16" fill="none" stroke="currentColor"><use xlink:href="../src/img/sprites.svg#icon-all-games"></use></svg>
+                        <svg class="w-16 h-16" fill="none" stroke="currentColor"><use xlink:href="src/img/sprites.svg#icon-all-games"></use></svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-3">Todos los Juegos</h3>
                     <p class="text-gray-400 mb-4">Explora nuestro catálogo completo de juegos con miles de títulos disponibles</p>
@@ -165,7 +165,7 @@
                 <!-- Opción 2: Juegos Gratis -->
                 <div class="option-card" data-page="juegos-gratis">
                     <div class="option-icon">
-                        <svg class="w-16 h-16" fill="none" stroke="currentColor"><use xlink:href="../src/img/sprites.svg#icon-free-games"></use></svg>
+                        <svg class="w-16 h-16" fill="none" stroke="currentColor"><use xlink:href="src/img/sprites.svg#icon-free-games"></use></svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-3">Juegos Gratis</h3>
                     <p class="text-gray-400 mb-4">Descarga F2P sin costo. Juegos como Fortnite, Valorant y muchos más</p>
@@ -175,7 +175,7 @@
                 <!-- Opción 3: Ofertas Especiales -->
                 <div class="option-card" data-page="ofertas-especiales">
                     <div class="option-icon">
-                        <svg class="w-16 h-16" fill="none" stroke="currentColor"><use xlink:href="../src/img/sprites.svg#icon-special-offers"></use></svg>
+                        <svg class="w-16 h-16" fill="none" stroke="currentColor"><use xlink:href="src/img/sprites.svg#icon-special-offers"></use></svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-3">Ofertas Especiales</h3>
                     <p class="text-gray-400 mb-4">Descuentos hasta el 60% en los juegos más populares y recientes</p>
@@ -185,7 +185,7 @@
                 <!-- Opción 4: Mis Favoritos -->
                 <div class="option-card" data-page="favoritos">
                     <div class="option-icon">
-                        <svg class="w-16 h-16" fill="none" stroke="currentColor"><use xlink:href="../src/img/sprites.svg#icon-favorites"></use></svg>
+                        <svg class="w-16 h-16" fill="none" stroke="currentColor"><use xlink:href="src/img/sprites.svg#icon-favorites"></use></svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-3">Mis Favoritos</h3>
                     <p class="text-gray-400 mb-4">Accede a tu lista de deseos y guarda los juegos que te interesan</p>
@@ -285,7 +285,7 @@
                     <option>Descuento Mayor</option>
                 </select>
                 <button class="view-toggle" data-view="grid">
-                    <svg class="w-5 h-5" fill="currentColor"><use xlink:href="../src/img/sprites.svg#icon-grid-view"></use></svg>
+                    <svg class="w-5 h-5" fill="currentColor"><use xlink:href="src/img/sprites.svg#icon-grid-view"></use></svg>
                 </button>
             </div>
         </div>
@@ -558,26 +558,26 @@
         </div>
     </footer>
 
-    <script src="../src/javascript/app.js"></script>
+    <script src="src/javascript/app.js"></script>
     <script>
         // Navegar a páginas desde las tarjetas de opciones
         document.querySelectorAll('.option-card').forEach(card => {
             card.addEventListener('click', function() {
                 const page = this.dataset.page;
                 if (page) {
-                    window.location.href = `${page}.html`;
+                    window.location.href = `html/${page}.html`;
                 }
             });
         });
 
         // Botón explorar desde el hero
         document.querySelector('.explore-btn')?.addEventListener('click', function() {
-            window.location.href = 'todos-los-juegos.html';
+            window.location.href = 'html/todos-los-juegos.html';
         });
 
         // Botón de llamada a la acción
         document.querySelector('.btn-lg')?.addEventListener('click', function() {
-            window.location.href = 'todos-los-juegos.html';
+            window.location.href = 'html/todos-los-juegos.html';
         });
     </script>
 </body>
