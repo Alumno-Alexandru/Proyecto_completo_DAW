@@ -76,9 +76,6 @@ python -m venv .venv
 # Windows
 .venv\Scripts\activate
 ````markdown
-# PROYECTO_COMPLETO_GITGAME_STORE
-
-
 
 # Resumen breve
 
