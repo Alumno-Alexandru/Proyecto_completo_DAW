@@ -1,0 +1,50 @@
+Briefing del Proyecto: GitGame Store
+
+1. Información General del Cliente
+Nombre del Cliente: GitGame Store
+Tipo de Negocio: Tienda Online de Videojuegos y Suscripciones Digitales
+Ubicación: Operación Global (Sede ficticia en Madrid, España)
+Objetivo del Sitio Web: Consolidar una plataforma robusta para la venta de videojuegos digitales y gestionar un sistema de suscripciones escalonado (Free, Pro, Premium, VIP) que maximice la retención de usuarios.
+
+2. Objetivos del Proyecto
+Centralizar el Catálogo: Ofrecer una interfaz unificada para explorar, filtrar y comprar videojuegos de diversas categorías.
+Potenciar el Modelo de Suscripción: Implementar un sistema flexible (mensual/anual) que permita a los usuarios mejorar su estatus y acceder a beneficios exclusivos.
+Modernizar la Experiencia de Usuario (UX): Asegurar una navegación fluida, intuitiva y responsive, adaptada a la estética "gamer" actual.
+
+3. Descripción del Negocio
+Misión: Proporcionar a los jugadores acceso inmediato a los mejores títulos y beneficios exclusivos a través de una plataforma tecnológica eficiente y centrada en el usuario.
+Visión: Ser el referente independiente en la distribución digital de videojuegos, conocido por su transparencia y valor añadido en suscripciones.
+Valores: Innovación tecnológica, pasión por el gaming, y compromiso con la comunidad de jugadores.
+
+4. Información de Mercado
+Audiencia Objetivo: Gamers apasionados, de 15 a 45 años, familiarizados con la cultura digital, que buscan valor en servicios de suscripción y ofertas curadas.
+Competidores: Steam, Epic Games Store, Xbox Game Pass, Humble Bundle.
+Diferenciadores Clave: Enfoque en niveles de suscripción claros con beneficios tangibles, interfaz simplificada sin "bloatware", y transparencia en precios.
+
+5. Requerimientos Específicos
+Idiomas: Español (Principal), con estructura preparada para internacionalización (i18n).
+Tipología de Página Web: E-commerce de productos digitales (SPA o Multi-page) con panel de gestión de usuario.
+Estilo Visual y Tono:
+    - Visual: "Dark Mode" por defecto, paleta de colores oscuros con acentos neón (verde/azul/morado) típicos del gaming. Diseño limpio y modular.
+    - Tono: Entusiasta, directo y cómplice con el jugador ("Level up your experience").
+
+6. Detalles Técnicos
+Plataforma: Web App moderna.
+Stack Tecnológico:
+    - Frontend: HTML5, Tailwind CSS (para diseño rápido y responsive), JavaScript (Vanilla) para lógica de cliente.
+    - Backend: Python (módulos para lógica de negocio y gestión de suscripciones).
+Funcionalidades Esenciales:
+    - Catálogo navegable con filtros (género, precio, valoración).
+    - Carrito de compras funcional (persistencia local).
+    - Sistema de Suscripciones: 4 niveles (Free, Pro, Premium, VIP) con toggle de facturación (Mensual/Anual).
+    - Gestión de estado: Modales para confirmación de cambios de plan y cancelación.
+    - Persistencia de datos simulada (JSON/LocalStorage) para prototipado rápido.
+SEO y Marketing: URLs amigables para juegos, optimización de carga (performance), integración futura con analytics.
+
+7. Plazos y Observaciones
+Fecha de Inicio del Proyecto: 1 de Septiembre (Año en curso)
+Fecha de Lanzamiento (Fase Beta): 1 de Diciembre (Año en curso)
+Observaciones:
+    - El proyecto actual ("v1") se centra en la funcionalidad del frontend y la lógica de negocio de suscripciones.
+    - La integración con pasarelas de pago reales (Stripe/PayPal) y base de datos persistente está planificada para la "v2".
+    - Se requiere código modular y testable (unit tests en Python incluidos).
