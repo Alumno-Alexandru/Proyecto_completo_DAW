@@ -70,41 +70,14 @@ pnpm install
 python -m venv .venv
 # Windows
 .venv\Scripts\activate
-pip install -r src/python/requirements.txt
-python -m pytest src/python/test_subscriptions.py
-```
+````markdown
+# PROYECTO_COMPLETO_GITGAME_STORE
 
-Uso
+## Briefings (enlaces a `doc/`)
 
-- Abrir la página de suscripciones: `html/suscripciones.html`.
-- Cambiar entre mensual/anual con el toggle.
-- Hacer clic en "Actualizar Ahora" para cambiar de plan; el sistema aplica el cambio localmente y muestra notificaciones.
-- Para cancelar un plan pago, usar el botón "Cancelar Suscripción" y confirmar en el modal.
+- [Briefing_Proyecto_GitGame.txt](doc/Briefing_Proyecto_GitGame.txt)
+- [Briefing.txt](doc/Briefing.txt)
 
-Notas de desarrollo
+# Resumen breve
 
-- Los datos de ejemplo y estado se almacenan en archivos JSON dentro de `src/data/` y/o en `localStorage` según la implementación.
-- El backend Python incluido es de ejemplo/educativo; para producción integrar servicios reales y persistencia.
-
-Tests
-
-- Hay pruebas básicas en `src/python/test_subscriptions.py` que verifican la lógica de `subscriptions_manager.py`.
-- Ejecutar con `pytest` como se indica en la sección anterior.
-
-Siguientes pasos recomendados
-
-- Integrar un backend real (Flask/FastAPI) y una base de datos para persistencia.
-- Añadir autenticación de usuarios para vincular suscripciones a cuentas.
-- Integrar pasarela de pago (Stripe/PayPal) si se activa el pago real.
-
-Contribuciones
-
-Se aceptan PRs con mejoras: por favor crea una rama, añade tests cuando corresponda y abre un PR con descripción clara.
-
-Licencia
-
-Incluye una licencia MIT por defecto (añadir fichero LICENSE si se desea).
-
-Contacto
-
-Autor / Mantenimiento: ver información del repositorio o contactar al responsable del curso/proyecto.
+Este repositorio contiene el proyecto "GitGame Store" —un sitio web de ejemplo con catálogo de juegos, carrito de compras y un sistema de suscripciones— desarrollado como parte del trabajo del curso. El objetivo es ofrecer una versión completa y modular que incluya frontend (HTML/CSS/JS), lógica cliente, y módulos de backend en Python para manejar suscripciones.
