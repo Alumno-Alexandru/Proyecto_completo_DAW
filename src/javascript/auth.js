@@ -2,6 +2,7 @@
 // SISTEMA DE AUTENTICACIÓN - Módulo separado
 // ============================================
 
+// Clase principal de autenticación
 class Auth {
     constructor() {
         this.currentUser = this.getCurrentUser();
@@ -59,6 +60,7 @@ class Auth {
         document.head.appendChild(styles);
     }
 
+    // Carga usuarios simulados
     // Cargar usuarios desde localStorage o usar datos por defecto
     loadUsers() {
         const storedUsers = localStorage.getItem('gitgame_users');
@@ -102,6 +104,7 @@ class Auth {
         return session ? JSON.parse(session) : null;
     }
 
+    // Proceso de login
     // Iniciar sesión
     login(email, password) {
         return new Promise((resolve, reject) => {
@@ -132,6 +135,7 @@ class Auth {
         });
     }
 
+    // Proceso de registro
     // Registrar nuevo usuario
     async register(name, email, password, confirmPassword) {
         return new Promise((resolve, reject) => {
@@ -182,6 +186,7 @@ class Auth {
         });
     }
 
+    // Proceso de logout
     // Cerrar sesión
     async logout() {
         localStorage.removeItem('gitgame_session');
@@ -190,6 +195,7 @@ class Auth {
         this.showNotification('Sesión cerrada');
     }
 
+    // Actualiza el botón de perfil en la UI
     // Actualizar la UI con el estado del usuario
     updateUI() {
         const btn = document.querySelector('.profile-btn');
@@ -211,6 +217,7 @@ class Auth {
         }
     }
 
+    // Muestra el modal de login/registro
     // Mostrar modal de autenticación
     showAuthModal(mode = 'login') {
         let overlay = document.getElementById('authOverlay');
@@ -230,6 +237,7 @@ class Auth {
         this.switchAuthMode(mode);
     }
 
+    // Genera el HTML del modal
     // HTML del modal de autenticación
     getAuthModalHTML() {
         return `
@@ -263,6 +271,7 @@ class Auth {
         `;
     }
 
+    // Cambia entre pestaña login y registro
     // Cambiar modo entre login y registro
     switchAuthMode(mode) {
         const overlay = document.getElementById('authOverlay');
@@ -286,6 +295,7 @@ class Auth {
         document.getElementById('registerError').textContent = '';
     }
 
+    // Maneja el submit de login
     // Manejar envío del formulario de login
     async handleLogin(event) {
         event.preventDefault();
@@ -302,6 +312,7 @@ class Auth {
         }
     }
 
+    // Maneja el submit de registro
     // Manejar envío del formulario de registro
     async handleRegister(event) {
         event.preventDefault();
@@ -320,6 +331,7 @@ class Auth {
         }
     }
 
+    // Cierra el modal
     // Cerrar modal de autenticación
     closeAuthModal() {
         const overlay = document.getElementById('authOverlay');
@@ -330,6 +342,7 @@ class Auth {
         }
     }
 
+    // Muestra menú desplegable de usuario
     // Mostrar menú de usuario
     showUserMenu(btn) {
         let menu = document.getElementById('userMenu');
@@ -370,6 +383,7 @@ class Auth {
         }, 100);
     }
 
+    // Muestra modal de perfil
     // Mostrar perfil del usuario
     showProfile() {
         const menu = document.getElementById('userMenu');
@@ -407,6 +421,7 @@ class Auth {
         document.body.style.overflow = 'hidden';
     }
 
+    // Ejecuta logout
     // Manejar logout
     async handleLogout() {
         await this.logout();

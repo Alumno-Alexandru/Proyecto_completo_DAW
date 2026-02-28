@@ -1,4 +1,5 @@
 // Sistema de autenticación optimizado - GitGame Store
+// Clase principal de autenticación
 class Auth {
     constructor() {
         this.currentUser = this.getCurrentUser();
@@ -12,6 +13,7 @@ class Auth {
         this.setupEventListeners();
     }
 
+    // Carga usuarios simulados
     // Cargar usuarios desde localStorage o usar datos por defecto
     loadUsers() {
         const storedUsers = localStorage.getItem('gitgame_users');
@@ -43,17 +45,20 @@ class Auth {
         return defaultUsers;
     }
 
+    // Guarda usuarios
     // Guardar usuarios en localStorage
     saveUsers() {
         localStorage.setItem('gitgame_users', JSON.stringify(this.users));
     }
 
+    // Obtiene usuario actual
     // Obtener usuario actual de la sesión
     getCurrentUser() {
         const session = localStorage.getItem('gitgame_session');
         return session ? JSON.parse(session) : null;
     }
 
+    // Proceso de login
     // Iniciar sesión
     login(email, password) {
         return new Promise((resolve, reject) => {
@@ -86,6 +91,7 @@ class Auth {
         });
     }
 
+    // Proceso de registro
     // Registrar nuevo usuario
     async register(name, email, password, confirmPassword) {
         return new Promise((resolve, reject) => {
@@ -108,6 +114,7 @@ class Auth {
         });
     }
 
+    // Proceso de logout
     async logout() {
         localStorage.removeItem('gitgame_session');
         this.currentUser = null;
@@ -115,6 +122,7 @@ class Auth {
         this.showNotification('Sesión cerrada');
     }
 
+    // Actualiza UI
     updateUI() {
         const btn = document.querySelector('.profile-btn');
         if (!btn) return;
@@ -129,6 +137,7 @@ class Auth {
         }
     }
 
+    // Muestra modal
     showAuthModal(mode = 'login') {
         let modal = document.getElementById('authModal');
         if (!modal) {
@@ -143,6 +152,7 @@ class Auth {
         this.switchAuthMode(mode);
     }
 
+    // Cambia modo login/registro
     switchAuthMode(mode) {
         const modal = document.getElementById('authModal');
         const loginForm = document.getElementById('loginForm');
@@ -164,6 +174,7 @@ class Auth {
         document.getElementById('registerError').textContent = '';
     }
 
+    // Maneja submit login
     async handleLogin(event) {
         event.preventDefault();
         const email = document.getElementById('loginEmail').value;
@@ -178,6 +189,7 @@ class Auth {
         }
     }
 
+    // Maneja submit registro
     async handleRegister(event) {
         event.preventDefault();
         const name = document.getElementById('registerName').value;
@@ -194,6 +206,7 @@ class Auth {
         }
     }
 
+    // Cierra modal
     closeAuthModal() {
         const modal = document.getElementById('authModal');
         if (modal) {
@@ -202,6 +215,7 @@ class Auth {
         }
     }
 
+    // Muestra menú usuario
     showUserMenu(btn) {
         let menu = document.getElementById('userMenu');
         if (!menu) {
@@ -218,6 +232,7 @@ class Auth {
         setTimeout(() => document.addEventListener('click', (e) => {if (!menu.contains(e.target) && !btn.contains(e.target)) menu.classList.remove('active');}, 100));
     }
 
+    // Muestra perfil
     showProfile() {
         const menu = document.getElementById('userMenu');
         if (menu) menu.classList.remove('active');
@@ -237,10 +252,12 @@ class Auth {
         document.body.style.overflow = 'hidden';
     }
 
+    // Maneja logout
     async handleLogout() {
         await this.logout();
     }
 
+    // Muestra notificación
     showNotification(message, type = 'info') {
         const notification = document.createElement('div');
         notification.className = `notification ${type}`;
@@ -252,12 +269,14 @@ class Auth {
 }
 
 
+// Inicialización
 let auth;
 document.addEventListener('DOMContentLoaded', () => {
     auth = new Auth();
     addAuthStyles();
 });
 
+// Estilos CSS inyectados
 function addAuthStyles() {
     if (document.getElementById('auth-styles')) return;
     const styles = document.createElement('style');

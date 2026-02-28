@@ -4,6 +4,7 @@
 
 let cart, wishlist;
 
+// Inicialización principal
 document.addEventListener('DOMContentLoaded', () => {
     // Inicializar componentes
     cart = new ShoppingCart();
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// Configura eventos del carrito
 function initCartEvents() {
     // Abrir carrito
     document.querySelector('.cart-btn')?.addEventListener('click', (e) => {
@@ -83,6 +85,7 @@ function initCartEvents() {
 }
 
 
+// Configura eventos de productos
 function initProductEvents() {
     document.addEventListener('click', (e) => {
         // Añadir al carrito
@@ -112,6 +115,7 @@ function initProductEvents() {
 }
 
 
+// Configura navegación
 function initNavigationEvents() {
     // Perfil
     document.querySelector('.profile-btn')?.addEventListener('click', () => {
@@ -144,6 +148,7 @@ function initNavigationEvents() {
 }
 
 
+// Configura menú móvil
 function initMobileMenu() {
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const mobileMenu = document.getElementById('mobileMenu');

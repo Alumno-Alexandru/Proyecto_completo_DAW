@@ -2,6 +2,7 @@
 // GESTIÓN DE PRODUCTOS - Módulo separado
 // ============================================
 
+// Clase para gestionar productos
 class ProductManager {
     constructor() {
         this.cards = document.querySelectorAll('.juego-card');
@@ -14,6 +15,7 @@ class ProductManager {
         }
     }
 
+    // Resalta tarjeta
     highlightCard(card) {
         this.cards.forEach(c => {
             c.classList.remove('active', 'dimmed');
@@ -21,6 +23,7 @@ class ProductManager {
         card.classList.add('active');
     }
 
+    // Filtra por búsqueda
     filterProducts(query) {
         const q = query.toLowerCase();
         
@@ -33,6 +36,7 @@ class ProductManager {
         });
     }
 
+    // Ordena productos
     sortProducts(sortOption) {
         const container = document.querySelector('.juegos-container');
         const cardsArray = Array.from(this.cards);
@@ -66,6 +70,7 @@ class ProductManager {
         });
     }
 
+    // Obtiene info de tarjeta
     getProductInfo(card) {
         return {
             title: card.querySelector('.juego-titulo')?.textContent || '',
@@ -81,12 +86,14 @@ class ProductManager {
 // NAVEGACIÓN - Módulo separado
 // ============================================
 
+// Clase para navegación
 class Navigation {
     constructor() {
         this.navLinks = document.querySelectorAll('.nav-link');
         this.initializeNavigation();
     }
 
+    // Marca enlace activo
     initializeNavigation() {
         const currentPath = window.location.pathname.split('/').pop();
         

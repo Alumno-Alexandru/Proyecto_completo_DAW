@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ==================== TOGGLE MENSUAL/ANUAL ====================
+// Configura el interruptor de facturación
 function setupBillingToggle() {
     const toggle = document.getElementById('billingToggle');
     const toggleCircle = toggle.querySelector('.toggle-circle');
@@ -44,6 +45,7 @@ function setupBillingToggle() {
 }
 
 // Actualizar precios según modo de facturación
+// Cambia los precios mostrados en las tarjetas
 function updatePrices() {
     const plans = document.querySelectorAll('.card-plan');
 
@@ -77,6 +79,7 @@ function updatePrices() {
 }
 
 // ==================== SETUP FAQ ====================
+// Configura el acordeón de preguntas frecuentes
 function setupFAQ() {
     const faqItems = document.querySelectorAll('.faq-item');
 
@@ -111,6 +114,7 @@ function setupFAQ() {
 }
 
 // ==================== SETUP SUBSCRIBE BUTTONS ====================
+// Configura los botones de suscripción
 function setupSubscribeButtons() {
     const subscribeButtons = document.querySelectorAll('.btn-subscribe');
 
@@ -144,6 +148,7 @@ function setupSubscribeButtons() {
 }
 
 // ==================== MODALES ====================
+// Abre el modal de cancelación
 function openCancelModal(plan) {
     const modal = createCancelModal(plan);
     document.body.appendChild(modal);
@@ -161,6 +166,7 @@ function openCancelModal(plan) {
 }
 
 // Crear modal de cancelación
+// Genera el HTML del modal
 function createCancelModal(plan) {
     const div = document.createElement('div');
     div.className = 'fixed inset-0 bg-black/80 flex items-center justify-center z-50';
@@ -204,6 +210,7 @@ function createCancelModal(plan) {
 }
 
 // Cancelar suscripción
+// Lógica para cancelar el plan
 function cancelSubscription(plan) {
     currentPlan = 'free';
     updateUI();
@@ -214,6 +221,7 @@ function cancelSubscription(plan) {
 }
 
 // Actualizar UI según plan actual
+// Actualiza el estado de los botones según el plan activo
 function updateUI() {
     const planNames = ['free', 'pro', 'premium', 'vip'];
     const buttons = document.querySelectorAll('.btn-subscribe');
@@ -253,6 +261,7 @@ function updateUI() {
 }
 
 // Mostrar notificaciones
+// Muestra mensaje flotante
 function showNotification(message, type = 'info') {
     const div = document.createElement('div');
     

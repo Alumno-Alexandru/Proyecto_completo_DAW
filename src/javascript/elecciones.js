@@ -1,5 +1,6 @@
 // elecciones.js - manejo de elecciones/ordenación (separado)
 
+// Configura el selector de ordenamiento
 document.addEventListener('DOMContentLoaded', () => {
     const filterSelect = document.querySelector('.filter-select');
     const container = document.querySelector('.juegos-container');

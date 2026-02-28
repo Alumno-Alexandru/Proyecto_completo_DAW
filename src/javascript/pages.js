@@ -4,6 +4,7 @@
 
 let allGames = [];
 
+// Carga los datos de los juegos desde el archivo JSON
 // Cargar datos de juegos desde db.json
 async function loadGamesFromDB() {
     try {
@@ -25,6 +26,7 @@ async function loadGamesFromDB() {
 // FUNCIÓN PARA CREAR TARJETA DE JUEGO
 // ============================================
 
+// Genera el HTML para una tarjeta de juego individual
 function createGameCard(game) {
     let badgeHTML = '';
     
@@ -74,6 +76,7 @@ function createGameCard(game) {
 // CARGAR JUEGOS EN PÁGINA
 // ============================================
 
+// Renderiza los juegos en la página según el tipo (todos, gratis, ofertas)
 async function loadGamesOnPage(pageType) {
     // Asegurar que los juegos estén cargados
     if (allGames.length === 0) {
@@ -103,6 +106,7 @@ async function loadGamesOnPage(pageType) {
 // CARGAR FAVORITOS
 // ============================================
 
+// Carga y muestra los juegos guardados en la lista de deseos
 async function loadWishlist() {
     // Asegurar que los juegos estén cargados
     if (allGames.length === 0) {
@@ -131,6 +135,7 @@ async function loadWishlist() {
 // INICIALIZAR EVENTOS DE TARJETAS
 // ============================================
 
+// Configura los eventos de click (carrito, favoritos) para las tarjetas
 function initializeGameCards() {
     // Botones de añadir al carrito
     document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
@@ -203,6 +208,37 @@ function initializeGameCards() {
 // DETECTAR PÁGINA Y CARGAR CONTENIDO
 // ============================================
 
+// Muestra una notificación flotante en pantalla
+function showNotification(message) {
+    const notification = document.createElement('div');
+    notification.className = 'fixed top-4 right-4 bg-green-600 text-white px-6 py-3 rounded-lg shadow-xl z-50 transition-all duration-500 transform translate-y-[-20px] opacity-0';
+    notification.textContent = message;
+    document.body.appendChild(notification);
+
+    // Animación de entrada
+    setTimeout(() => {
+        notification.classList.remove('translate-y-[-20px]', 'opacity-0');
+    }, 10);
+
+    // Desaparecer después de 3 segundos
+    setTimeout(() => {
+        notification.classList.add('opacity-0', 'translate-y-[-20px]');
+        setTimeout(() => notification.remove(), 500);
+    }, 3000);
+}
+
+// Configura la alerta al hacer clic en pagar
+function setupCheckoutAlert() {
+    const checkoutBtn = document.querySelector('.checkout-btn');
+    if (checkoutBtn) {
+        checkoutBtn.addEventListener('click', () => {
+            showNotification('¡Gracias por tu compra! Tu pedido ha sido procesado correctamente.');
+            document.querySelector('.close-cart-btn')?.click();
+        });
+    }
+}
+
+// Inicialización principal cuando carga el DOM
 document.addEventListener('DOMContentLoaded', () => {
     // Pequeño delay para asegurar que app.js se haya ejecutado completamente
     setTimeout(async () => {
@@ -218,5 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (currentURL.includes('wishlist.html') || currentURL.includes('favoritos.html')) {
             await loadWishlist();
         }
+
+        setupCheckoutAlert();
     }, 100);
 });

@@ -1,6 +1,7 @@
 // ============================================
 // CARRITO DE COMPRAS
 // ============================================
+// Clase principal para gestionar el carrito
 class ShoppingCart {
     constructor() {
         this.items = this.loadFromStorage();
@@ -8,6 +9,7 @@ class ShoppingCart {
         this.cartOverlay = document.getElementById('cartOverlay');
     }
 
+    // Añade un producto al carrito
     add(product) {
         const existing = this.items.find(item => item.title === product.title);
         if (existing) existing.quantity++;
@@ -17,6 +19,7 @@ class ShoppingCart {
         this.showNotification(`${product.title} añadido al carrito`);
     }
 
+    // Elimina un producto del carrito
     remove(productTitle) {
         this.items = this.items.filter(item => item.title !== productTitle);
         this.save();
@@ -24,6 +27,7 @@ class ShoppingCart {
         this.showNotification('Producto eliminado');
     }
 
+    // Actualiza la cantidad de un producto
     updateQuantity(productTitle, qty) {
         const item = this.items.find(i => i.title === productTitle);
         if (item) {
@@ -36,22 +40,27 @@ class ShoppingCart {
         }
     }
 
+    // Guarda y carga del localStorage
     save() { localStorage.setItem('cart', JSON.stringify(this.items)); }
     loadFromStorage() { return JSON.parse(localStorage.getItem('cart') || '[]'); }
     
+    // Actualiza toda la interfaz del carrito
     updateUI() {
         this.updateCount();
         this.updateCartDisplay();
     }
 
+    // Actualiza el contador rojo del icono
     updateCount() {
         const count = this.items.reduce((s, i) => s + i.quantity, 0);
         const el = document.querySelector('.cart-count');
         if (el) el.textContent = count;
     }
 
+    // Calcula el subtotal
     getSubtotal() { return this.items.reduce((s, i) => s + (parseFloat(i.price) * i.quantity), 0); }
 
+    // Renderiza la lista de items en el modal
     updateCartDisplay() {
         const list = document.getElementById('cartItemsList');
         list.innerHTML = !this.items.length ? '<p class="text-center py-8">Tu carrito está vacío</p>' : 
@@ -59,6 +68,7 @@ class ShoppingCart {
         this.updateCartSummary();
     }
 
+    // Actualiza los totales y descuentos
     updateCartSummary() {
         const fmt = (n) => n.toLocaleString('es-ES', {minimumFractionDigits: 2, maximumFractionDigits: 2});
         const sub = this.getSubtotal();
@@ -74,18 +84,21 @@ class ShoppingCart {
         if (btn) btn.disabled = this.items.length === 0;
     }
 
+    // Abre el modal
     openCart() {
         this.cartModal?.classList.add('active');
         this.cartOverlay?.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
 
+    // Cierra el modal
     closeCart() {
         this.cartModal?.classList.remove('active');
         this.cartOverlay?.classList.remove('active');
         document.body.style.overflow = 'auto';
     }
 
+    // Muestra notificación temporal
     showNotification(msg) {
         const el = document.createElement('div');
         el.className = 'notification';
@@ -99,6 +112,7 @@ class ShoppingCart {
 // ============================================
 // LISTA DE DESEOS
 // ============================================
+// Clase para gestionar favoritos
 class Wishlist {
     constructor() {
         this.items = JSON.parse(localStorage.getItem('wishlist') || '[]');
@@ -116,6 +130,7 @@ class Wishlist {
 // ============================================
 // EFECTOS Y BÚSQUEDA
 // ============================================
+// Clase para gestionar productos y filtrado
 class ProductManager {
     constructor() {
         this.cards = document.querySelectorAll('.juego-card');
@@ -123,11 +138,13 @@ class ProductManager {
         if (this.search) this.search.addEventListener('input', e => this.filterProducts(e.target.value));
     }
 
+    // Resalta una tarjeta
     highlightCard(card) {
         this.cards.forEach(c => c.classList.remove('active', 'dimmed'));
         card.classList.add('active');
     }
 
+    // Filtra productos por texto
     filterProducts(query) {
         const q = query.toLowerCase();
         this.cards.forEach(card => {
@@ -141,6 +158,7 @@ class ProductManager {
 // ============================================
 // NAVEGACIÓN
 // ============================================
+// Clase para gestionar enlaces activos
 class Navigation {
     constructor() {
         const path = window.location.pathname.split('/').pop();
@@ -155,6 +173,7 @@ class Navigation {
 // ============================================
 let cart, wishlist;
 
+// Inicialización cuando el DOM está listo
 document.addEventListener('DOMContentLoaded', () => {
     cart = new ShoppingCart();
     wishlist = new Wishlist();

@@ -21,6 +21,7 @@
 
 <body class="bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950 text-white min-h-screen">
 
+    <!-- BARRA DE NAVEGACIÓN -->
     <!-- NAV MEJORADA -->
     <nav class="nav-enhanced sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -83,6 +84,7 @@
         </div>
     </nav>
 
+    <!-- MODAL DEL CARRITO DE COMPRAS -->
     <!-- MODAL DEL CARRITO -->
     <div id="cartModal" class="cart-modal">
         <div class="cart-modal-content">
@@ -127,6 +129,7 @@
     <!-- OVERLAY del modal -->
     <div id="cartOverlay" class="cart-overlay"></div>
 
+    <!-- SECCIÓN HERO (BANNER PRINCIPAL) -->
     <!-- HERO SECTION -->
     <section class="hero-section py-24 md:py-32">
         <div class="container mx-auto px-4 text-center">
@@ -145,6 +148,7 @@
         </div>
     </section>
 
+    <!-- CATEGORÍAS Y OPCIONES -->
     <!-- SECCIÓN DE OPCIONES PRINCIPALES -->
     <section class="py-20">
         <div class="container mx-auto px-4">
@@ -228,6 +232,7 @@
         </div>
     </section>
 
+    <!-- CARACTERÍSTICAS DE LA TIENDA -->
     <!-- SECCIÓN DE CARACTERÍSTICAS -->
     <section class="py-20 bg-gradient-to-r from-blue-900/20 to-cyan-900/20 border-t border-b border-blue-900/30">
         <div class="container mx-auto px-4">
@@ -263,6 +268,7 @@
         </div>
     </section>
 
+    <!-- LLAMADA A LA ACCIÓN -->
     <!-- SECCIÓN DE LLAMADA A LA ACCIÓN -->
     <section class="py-20">
         <div class="container mx-auto px-4 text-center">
@@ -272,6 +278,7 @@
         </div>
     </section>
 
+    <!-- CONTENIDO PRINCIPAL (OCULTO INICIALMENTE) -->
     <!-- MAIN CONTENT OCULTO (para futuro uso) -->
     <main class="container mx-auto px-4 py-12" style="display: none;">
         <!-- Filtros y ordenamiento -->
@@ -503,6 +510,7 @@
         </div>
     </section>
 
+    <!-- PIE DE PÁGINA -->
     <!-- FOOTER MEJORADO -->
     <footer class="footer-enhanced mt-20 pt-12 border-t border-blue-900/30">
         <div class="container mx-auto px-4">
@@ -558,6 +566,7 @@
         </div>
     </footer>
 
+    <!-- SCRIPTS DE FUNCIONALIDAD -->
     <script src="src/javascript/app.js"></script>
     <script>
         // Navegar a páginas desde las tarjetas de opciones
@@ -578,6 +587,29 @@
         // Botón de llamada a la acción
         document.querySelector('.btn-lg')?.addEventListener('click', function() {
             window.location.href = 'html/todos-los-juegos.html';
+        });
+
+        // Función para mostrar notificación
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'fixed top-4 right-4 bg-green-600 text-white px-6 py-3 rounded-lg shadow-xl z-50 transition-all duration-500 transform translate-y-[-20px] opacity-0';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.classList.remove('translate-y-[-20px]', 'opacity-0');
+            }, 10);
+
+            setTimeout(() => {
+                notification.classList.add('opacity-0', 'translate-y-[-20px]');
+                setTimeout(() => notification.remove(), 500);
+            }, 3000);
+        }
+
+        // Alerta de compra realizada
+        document.querySelector('.checkout-btn')?.addEventListener('click', function() {
+            showNotification('¡Gracias por tu compra! Tu pedido ha sido procesado correctamente.');
+            document.querySelector('.close-cart-btn')?.click();
         });
     </script>
 </body>

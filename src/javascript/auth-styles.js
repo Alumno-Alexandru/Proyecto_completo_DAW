@@ -2,6 +2,7 @@
 // ESTILOS DE AUTENTICACIÓN - Módulo separado (Tailwind CSS)
 // ============================================
 
+// Inyecta estilos CSS para el módulo de autenticación
 function addAuthStyles() {
     // Verificar si ya existen los estilos
     if (document.getElementById('auth-styles')) {

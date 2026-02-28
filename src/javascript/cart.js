@@ -2,6 +2,7 @@
 // CARRITO DE COMPRAS - Módulo separado
 // ============================================
 
+// Clase para gestionar el carrito
 class ShoppingCart {
     constructor() {
         this.items = this.loadFromStorage();
@@ -9,6 +10,7 @@ class ShoppingCart {
         this.cartOverlay = document.getElementById('cartOverlay');
     }
 
+    // Añade producto
     add(product) {
         const existing = this.items.find(item => item.title === product.title);
         if (existing) {
@@ -21,6 +23,7 @@ class ShoppingCart {
         this.showNotification(`${product.title} añadido al carrito`);
     }
 
+    // Elimina producto
     remove(productTitle) {
         this.items = this.items.filter(item => item.title !== productTitle);
         this.save();
@@ -28,6 +31,7 @@ class ShoppingCart {
         this.showNotification('Producto eliminado');
     }
 
+    // Actualiza cantidad
     updateQuantity(productTitle, qty) {
         const item = this.items.find(i => i.title === productTitle);
         if (item) {
@@ -41,14 +45,17 @@ class ShoppingCart {
         }
     }
 
+    // Guarda en localStorage
     save() {
         localStorage.setItem('cart', JSON.stringify(this.items));
     }
 
+    // Carga de localStorage
     loadFromStorage() {
         return JSON.parse(localStorage.getItem('cart') || '[]');
     }
 
+    // Actualiza UI
     updateUI() {
         this.updateCount();
         this.updateCartDisplay();
@@ -62,10 +69,12 @@ class ShoppingCart {
         }
     }
 
+    // Calcula total
     getSubtotal() {
         return this.items.reduce((sum, item) => sum + (parseFloat(item.price) * item.quantity), 0);
     }
 
+    // Renderiza items
     updateCartDisplay() {
         const cartItemsList = document.getElementById('cartItemsList');
         
@@ -78,6 +87,7 @@ class ShoppingCart {
         this.updateCartSummary();
     }
 
+    // HTML de un item
     createCartItemHTML(item) {
         return `
             <div class="flex gap-4 p-4 border border-slate-700 rounded-lg hover:bg-slate-800/50 transition-colors" data-product="${item.title}">
@@ -96,6 +106,7 @@ class ShoppingCart {
         `;
     }
 
+    // Actualiza resumen de precios
     updateCartSummary() {
         const fmt = (n) => n.toLocaleString('es-ES', {
             minimumFractionDigits: 2,
@@ -120,18 +131,21 @@ class ShoppingCart {
         }
     }
 
+    // Abre modal
     openCart() {
         if (this.cartModal) this.cartModal.classList.add('active');
         if (this.cartOverlay) this.cartOverlay.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
 
+    // Cierra modal
     closeCart() {
         if (this.cartModal) this.cartModal.classList.remove('active');
         if (this.cartOverlay) this.cartOverlay.classList.remove('active');
         document.body.style.overflow = 'auto';
     }
 
+    // Muestra notificación
     showNotification(msg) {
         const notification = document.createElement('div');
         notification.className = 'fixed top-5 right-5 px-4 py-3 bg-emerald-500 text-white rounded-lg shadow-lg z-50 animate-slide-in';
