@@ -1,0 +1,177 @@
+Proyecto Intermodular de 
+Desarrollo de Aplicaciones Web 
+Índice propuesto 
+Contexto (Briefing) 
+Para empezar bien el proceso de diseño de una web, es 
+indispensable la comunicación que hay entre el cliente y la agencia. 
+Todo ello debe recogerse en un documento donde se establecen las 
+bases del proyecto. 
+ 
+✓ Información general del cliente 
+✓ Objetivos del Proyecto 
+✓ Descripción del Negocio 
+✓ Público objetivo 
+✓ Requerimientos Específicos 
+✓ Detalles Técnicos 
+✓ Plazos y Observaciones 
+ 
+Análisis y Planificación 
+En base a los datos recopilados en la fase anterior, desarrollaremos 
+una estrategia de diseño que no solo cumpla con las expectativas 
+del cliente, sino que también se destaque en el mercado 
+competitivo. 
+ 
+✓ Objetivos principales: resultados específicos, medibles y 
+limitados en tiempo, que se desea conseguir. 
+✓ Desglose de tareas: acciones concretas a llevar a cabo para la 
+consecución de los objetivos. Indicando responsables, fechas 
+de inicio y final. 
+✓ Diagrama de Gantt: esquema visual que nos aporte, de forma 
+rápida, una idea general sobre la distribución y planificación 
+de tareas del proyecto. 
+✓ Mapa del sitio: esquema visual para definir la estructura de la 
+web, ayudando a organizar las páginas y las categorías de 
+forma lógica e intuitiva para facilitar la navegación del 
+usuario. 
+ 
+Diseño y prototipado 
+En esta fase debemos generar la imagen de marca del cliente, así 
+como los colores, tipografías, iconografía y estilos. 
+ 
+Para un diseño más efectivo estudiaremos a los posibles 
+competidores directos e indirectos para identificar sus fortalezas y 
+debilidades. Esto incluye revisar sus páginas web, las 
+funcionalidades integradas, la estética y diseño, así como las 
+estrategias de marketing que tienen implementadas. 
+ 
+✓ Referencias: comenzaremos creando una página llamada 
+“Referencias” donde podemos poner cualquier fuente de 
+inspiración: capturas de otros portfolios, paletas de colores 
+que nos gusten, fuentes… Simplemente como inspiración. 
+ 
+✓ Sistema de Diseño Figma: que contenga al menos la paleta 
+de colores (3 a 5 colores), espaciados, tipografías y grid. 
+Generando las variables y tokens que los definan. 
+ 
+✓ Wireframe o Prototipo en Figma: diseño para escritorio y 
+móvil. Crearlos en dos páginas distintas. Los diseños se crean 
+en base a las variables. Es decir, cuando pongamos un color, 
+font family, font weight, font size etc, no pondremos su valor 
+absoluto estático, sino que pondremos la referencia a la 
+variable. 
+Desarrollo web 
+Uso de Tailwind CSS en modo de producción para desarrollar una 
+página totalmente funcional y compilar el CSS resultante. 
+ 
+Diseño responsivo con breakpoints y buenas prácticas según la 
+documentación de Tailwind. 
+ 
+✓ Herramientas software utilizadas durante las diferentes fases 
+del proyecto. 
+✓ Código fuente (HTML + CSS + ASSETS + README.md) 
+Publicación (GitHub Pages) 
+Crear un repositorio en GitHub y subir el proyecto. 
+Crear un archivo README.md en el repositorio que incluya: 
+↳ Enlace al prototipo en Figma. 
+↳ Enlace a la página publicada en GitHub Pages. 
+ 
+Publicar el sitio en GitHub Pages (en la pestaña de configuración del 
+repositorio, seleccionar la rama y carpeta donde está la 
+compilación.) 
+ 
+Asegurarse de que el portfolio sea accesible desde el enlace 
+proporcionado por GitHub Pages. 
+ 
+✓ Capturas del sitio web publicado 
+ 
+Bibliografía y referencias 
+✓ Enlaces y referencias consultadas para realizar el proyecto 
+Material de apoyo: 
+Tutorial Figma: crear un sistema de diseño partiendo de uno ya creado por la comunidad, 
+crear variables y tokens, crear componentes con variantes y testear su funcionamiento en 
+Figma, creación de los modos Light/Dark, crear estilos de tipografía, crear sistema de Grid 
+basado en variables. 
+https://www.youtube.com/watch?v=VsL5scpdT00 
+ 
+Tutorial Figma 2:  creación de una paleta de colores , d efinir estilos de sombra s, d efinir 
+nuestros estilos de tipografías, definir estilos de grids, creación componentes y variantes. 
+https://youtu.be/VdS9ZGHHXWQ?si=V-lji_1JTg8W3pTU&t=4361 
+ 
+Plugin Figma: exportar variables a Tailwind 
+https://www.figma.com/files/team/1552233570205047954/resources/community/plugin/148
+2322139658592700/layout-tailwind-css-v4-import-export?fuid=1546816241853515187 
+ 
+Tutorial Tailwind 4: creación de un portfolio simple desde cero con Tailwind. 
+https://www.youtube.com/watch?v=R5EXap3vNDA 
+ 
+Diseño responsivo en Tailwind: 
+https://tailwindcss.com/docs/responsive-design 
+ 
+Variables propias en Tailwind: 
+https://tailwindcss.com/docs/theme 
+ 
+Ejemplos portfolios inspiración: 
+https://www.figma.com/es-es/resource-library/ejemplos-sitios-portfolio/ 
+https://www.wearedevelopers.com/en/magazine/161/web-developer-portfolio-examples 
+https://dev.to/anmolbaranwal/stunning-portfolios-that-will-blow-your-mind-fuel-your-
+creativity-226o 
+ 
+Documentación sintaxis Markdown: 
+https://tutorialmarkdown.com/sintaxis 
+ 
+Como generar y usar un sitemap: 
+https://www.hostinger.com/es/tutoriales/que-es-un-sitemap 
+ 
+Publicar un sitio en GitHub Pages: 
+https://docs.github.com/es/pages/getting-started-with-github-pages/creating-a-github-pages-
+site 
+ 
+Rúbrica de Evaluación 
+ 
+Criterio Descripción Puntuación 
+Máxima 
+Prototipo en Figma 
+Diseño en Figma completo para escritorio y móvil. 
+Incluye sistema de diseño  (colores, espaciado, 
+fuentes, componentes y grid ). Correcto uso y  
+definición de variables organizadas en colecciones y 
+tokens de diseño. 
+2.0 
+Biblioteca 
+sprites.svg 
+Creación y uso  adecuado del fichero sprites.svg , 
+desde donde cargar logos, iconos o similares. 1.0 
+Creación de 
+variables propias 
+en Tailwind 
+Exportación de variables de colores Figma a formato 
+válido para Tailwind 4. Creación de variables propias 
+como fuentes, breakpoints… 
+1.0 
+Reutilización de 
+estilos Tailwind 
+Correcta creación y uso de la sentencia @apply, para 
+crear clases propias que engloben estilos definidos 
+mediante clases de Tailwind. 
+1.0 
+Diseño responsivo Correcta aplicación de las clases o sentencias para 
+asegurar responsividad. 1.0 
+GitHub Pages y 
+README.md 
+Proyecto subido y accesible desde GitHub Pages. El 
+README.md incluye enlaces al prototipo en Figma y 
+la página desplegada. 
+1.0 
+Calidad del código Código limpio, organizado y siguiendo buenas 
+prácticas de desarrollo. 1.0 
+Creatividad 
+Originalidad y enfoque innovador en el diseño . Uso 
+eficiente de las posibilidades que ofrece Tailwind a 
+través de sus clases (gradientes, variantes, 
+máscaras, group, etc.). 
+1.0 
+Funcionalidad 
+general 
+Todo el portfolio funciona correctamente 
+(navegación, enlaces, etc.). 1.0 
+ 
