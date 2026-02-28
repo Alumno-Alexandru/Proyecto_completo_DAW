@@ -1,17 +1,11 @@
 # PROYECTO_COMPLETO_GITGAME_STORE
 
 ## Briefings (enlaces a `doc/`)
-<<<<<<< HEAD
 
-- [Briefing_Proyecto_GitGame.txt](doc/Briefing_Proyecto_GitGame.txt)
-- [Briefing.txt](doc/Briefing.txt)
-- []
-=======
 - [Github_pages](https://alumno-alexandru.github.io/Proyecto_completo_DAW/)
 - [Briefing_Proyecto_GitGame.pdf](doc/Briefing_Proyecto_GitGame.pdf)
 - [Briefing.pdf](doc/Briefing.pdf)
 - [prototype_figma.html](https://www.figma.com/proto/pAix3HYEFVA2wOPMM5SAmm/Sin-t%C3%ADtulo?node-id=0-1&t=BLaCFICshi6Jy19g-1)
->>>>>>> 8c25b95d305fdebf1e94663401b8daed613df596
 
 Resumen breve
 
