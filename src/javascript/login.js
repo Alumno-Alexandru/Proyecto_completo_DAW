@@ -227,7 +227,7 @@ class Auth {
         const rect = btn.getBoundingClientRect();
         menu.style.top = rect.bottom + 10 + 'px';
         menu.style.right = (window.innerWidth - rect.right) + 'px';
-        menu.innerHTML = `<div class="user-menu-header"><span style="font-size:2rem">${this.currentUser.avatar}</span><div><strong>${this.currentUser.name}</strong><br><small>${this.currentUser.email}</small></div></div><a href="#" class="user-menu-item" onclick="auth.showProfile(); return false;">👤 Mi Perfil</a><a href="favoritos.html" class="user-menu-item">❤️ Mis Favoritos</a><a href="#" class="user-menu-item" onclick="auth.handleLogout(); return false;">🚪 Cerrar Sesión</a>`;
+        menu.innerHTML = `<div class="user-menu-header"><span style="font-size:2rem">${this.currentUser.avatar}</span><div><strong>${this.currentUser.name}</strong><br><small>${this.currentUser.email}</small></div></div><a href="#" class="user-menu-item" onclick="auth.showProfile(); return false;">👤 Mi Perfil</a><a href="../../html/favoritos.html" class="user-menu-item">❤️ Mis Favoritos</a><a href="#" class="user-menu-item" onclick="auth.handleLogout(); return false;">🚪 Cerrar Sesión</a>`;
         menu.classList.add('active');
         setTimeout(() => document.addEventListener('click', (e) => {if (!menu.contains(e.target) && !btn.contains(e.target)) menu.classList.remove('active');}, 100));
     }
