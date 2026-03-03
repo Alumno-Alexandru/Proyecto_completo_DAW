@@ -235,8 +235,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const card = e.target.closest('.juego-card');
             const title = card.querySelector('.juego-titulo')?.textContent;
             wishlist.toggle(title);
-            e.target.classList.toggle('active');
-            cart.showNotification(e.target.classList.contains('active') ? '❤️ Añadido' : '💔 Eliminado');
+            const isFav = wishlist.has(title);
+            e.target.textContent = isFav ? '❤️' : '♡';
+            cart.showNotification(isFav ? '❤️ Añadido a favoritos' : '💔 Eliminado de favoritos');
         }
     });
 

@@ -170,12 +170,25 @@ function initializeGameCards() {
             const title = titleElement.textContent;
 
             if (typeof wishlist !== 'undefined') {
+                wishlist.toggle(title);
+                
                 if (wishlist.has(title)) {
-                    wishlist.remove(title);
-                    btn.textContent = '♡';
-                } else {
-                    wishlist.add(title);
                     btn.textContent = '❤️';
+                    if (typeof showNotification === 'function') showNotification('Añadido a favoritos');
+                } else {
+                    btn.textContent = '♡';
+                    if (typeof showNotification === 'function') showNotification('Eliminado de favoritos');
+
+                    // Si estamos en la página de favoritos, eliminar la tarjeta visualmente al instante
+                    if (window.location.href.includes('favoritos.html') || window.location.href.includes('wishlist.html')) {
+                        card.remove();
+                        // Verificar si quedó vacío
+                        const container = document.getElementById('wishlist-container');
+                        if (container && container.children.length === 0) {
+                            container.style.display = 'none';
+                            document.getElementById('empty-wishlist').style.display = 'block';
+                        }
+                    }
                 }
             }
         });
